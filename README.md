@@ -1,1 +1,3 @@
-# Project for ARTD 313
+# Refugee
+
+A project for ARTD 313 - Website for a cause
