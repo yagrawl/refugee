@@ -17,16 +17,33 @@
 
     <!-- Custom CSS -->
     <link href="css/full-slider.css" rel="stylesheet">
+    <link href="css/timeline.css" rel="stylesheet">
 
     <!-- Montserrat -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="js/stripe.js"></script>
 
     <style>
         h1, h2, p {
             display: inline;
         }
-    </style>
 
+        .buttonM {
+            background-color: #4CAF50; 
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s; 
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body style="font-family: 'Montserrat', sans-serif;">
@@ -42,18 +59,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Refugee</a>
+                <a class="navbar-brand" href="#">REFUGEE</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a style="font-weight:200" href="#">About</a>
                     </li>
                     <li>
-                        <a href="#">Donate</a>
+                        <a style="font-weight:200" href="#">Donate</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a style="font-weight:200" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -249,6 +266,141 @@
 
                 </div>
             </div>
+            <div class="container-fluid" style="background-color:#DFDFDF">
+                <span style="display:block; height: 50px;"> </span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-1 col-xs-1">
+                        </div>
+                        <div class="col-lg-10 col-xs-10">
+                            <p style="color:#CE5050; font-size:28px">What's the hold up?</p>
+                            <p style="color:#383838; font-size:18px"> Are these people just lazy?</p>
+                            <ul class="timeline">
+                                <li>
+                                  <div class="timeline-badge"><i class="glyphicon glyphicons-life-preserver"></i></div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h4 class="timeline-title" style="color:#CE5050;">If you are a refugee</h4>
+                                      <p><small class="text-muted"><i class="glyphicon glyphicons-life-preserver"></i></small></p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <center><img class="img-responsive" src="images/unhcr_logo.png" width="150px"></center><br>
+                                      <p style="font-weight:200">First you apply through the United Nations High Commission of Refugees which collects documents and performs interviews. Incidentally, 1% of refugees worldwide end up being recommended for resettlement. </p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                  <div class="timeline-badge"><i class="glyphicon glyphicons-life-preserver"></i></div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h4 class="timeline-title" style="color:#CE5050;">But if you are one of them,</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <center><img class="img-responsive" src="images/statedepartment.png" width="150px"></center><br>
+                                      <p style="font-weight:200">You may then be referred to the state department to begin the vetting process. At this point more information is collected. The vetting process is basically there to check if the refugees coming to the country have any terroristic agenda. </p>
+                                      
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="timeline-badge"><i class="glyphicon glyphicons-life-preserver"></i></div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h4 class="timeline-title" style="color:#CE5050;">At this point, </h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <center><img class="img-responsive" src="images/vet_logo.png" width="300px"></center><br>
+                                      <p style="font-weight:200">More information is collected. You'll be put through security screenings by the National Counter Terrorism Center, the FBI and the Department of Homeland Security.</p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h4 class="timeline-title" style="color:#CE5050;">And if you are a Syrian Refugee,</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                      <p style="font-weight:200">You'll get an additional layer of screening called the 'Syria Enhanced Review' which me further include a check by a special part of the Homeland Security called the USCIS Fraud Detection and National Security Directors.</p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="timeline-badge"><i class="glyphicon glyphicons-life-preserver"></i></div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h4 class="timeline-title" style="color:#CE5050;">Then you finally get an Interview.</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <center><img class="img-responsive" src="images/finger_logo.png" width="300px"></center><br>
+                                      <p style="font-weight:200">The interview is conducted by the USCIS offices and you'll also be fingerprinted so your prints could be run through the biometric databases of the FBI, the department of Homeland Security and the Department of Defence.</p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                  <div class="timeline-badge"><i class="glyphicon glyphicons-unchecked"></i></div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h4 class="timeline-title" style="color:#CE5050;">If you make it through all that, </h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <center><img class="img-responsive" src="images/doctor.png" width="150px"></center><br>
+                                      <p style="font-weight:200">You'll have health screenings, which lets face it, may not go too well for you because of all the prior paper work obvisouly giving you a stroke. But if everything comes back clear, you'll be enrolled in cultural orientation classes all while your information continues to be checked recurrently against terrorist databases to make sure that no new information comes in that wasn't caught before. All of this has to happen before you get near a plane.</p>
+                                    </div>
+                                  </div>
+                                </li>
+                            </ul>
+                            <span style="display:block; height: 50px;"> </span>
+                            <p style="color:#CE5050; font-size:28px">Who in their right mind would want to go through a process like this unless they didn't have an option?</p>
+                        </div>
+                        <div class="col-lg-1 col-xs-1">
+                        </div>
+                    </div>
+                <div>
+                
+            </div>
+            <span style="display:block; height: 50px;"> </span>
+            <div class="container-fluid" style="background-color:#DFDFDF">
+                <div class="row">
+                    <div class="col-lg-1 col-xs-1">
+                    </div>
+                    <div class="col-lg-10 col-xs-10">
+                        <script src="https://checkout.stripe.com/checkout.js"></script>
+
+                        <center><button class="buttonM" id="customButton">Donate Now!</button></center>
+
+                        <script>
+                        var handler = StripeCheckout.configure({
+                          key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+                          image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+                          locale: 'auto',
+                          token: function(token) {
+                            // You can access the token ID with `token.id`.
+                            // Get the token ID to your server-side code for use.
+                          }
+                        });
+
+                        document.getElementById('customButton').addEventListener('click', function(e) {
+                          // Open Checkout with further options:
+                          handler.open({
+                            name: 'Refugee',
+                            description: 'Thanks!',
+                            zipCode: true,
+                            amount: 1000
+                          });
+                          e.preventDefault();
+                        });
+
+                        // Close Checkout on page navigation:
+                        window.addEventListener('popstate', function() {
+                          handler.close();
+                        });
+                        </script>
+                    </div>
+                    <div class="col-lg-1 col-xs-1">
+                    </div>
+                </div>
+            </div>
+
             <hr>
 
             <!-- Footer -->
