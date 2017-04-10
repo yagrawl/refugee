@@ -146,3 +146,31 @@
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
+
+.imageText {
+  background-color: black;
+  opacity: 0.7;
+}
+
+
+/******* Extra  */
+
+.stay {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    z-index:1; 
+}
+
+.navbarstay {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.scrolltextbox {
+    width: 150px;
+    height: 150px;
+    overflow: scroll;
+}
